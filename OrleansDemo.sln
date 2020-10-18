@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{B9FB4F91-62D4-4F35-A21D-807D784BCDB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{B9FB4F91-62D4-4F35-A21D-807D784BCDB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWrold.AdoNetClustering", "HelloWrold.AdoNetClustering\HelloWrold.AdoNetClustering.csproj", "{029BA22A-2941-4D6A-98D0-556F22EB7432}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockAccess", "Order\StockAccess.csproj", "{2021ADA7-5A91-4F59-990B-186B2ABBD674}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B9FB4F91-62D4-4F35-A21D-807D784BCDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9FB4F91-62D4-4F35-A21D-807D784BCDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9FB4F91-62D4-4F35-A21D-807D784BCDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029BA22A-2941-4D6A-98D0-556F22EB7432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029BA22A-2941-4D6A-98D0-556F22EB7432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029BA22A-2941-4D6A-98D0-556F22EB7432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029BA22A-2941-4D6A-98D0-556F22EB7432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2021ADA7-5A91-4F59-990B-186B2ABBD674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2021ADA7-5A91-4F59-990B-186B2ABBD674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2021ADA7-5A91-4F59-990B-186B2ABBD674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2021ADA7-5A91-4F59-990B-186B2ABBD674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
