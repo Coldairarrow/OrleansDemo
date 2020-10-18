@@ -1,10 +1,10 @@
 ﻿using Orleans;
 using System.Threading.Tasks;
 
-namespace IGrains
+namespace HelloWorld.IGrains
 {
-    public interface IHello : IGrainWithIntegerKey
+    internal interface IHello : IGrainWithIntegerKey
     {
-        Task<string> SayHello(string name);
+        Task Say(string name);
     }
 }
