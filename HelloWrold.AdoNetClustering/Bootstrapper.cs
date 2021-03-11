@@ -1,6 +1,7 @@
 ﻿using HelloWrold.AdoNetClustering.IGrains;
 using Microsoft.Extensions.Hosting;
 using Orleans;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -18,7 +19,14 @@ namespace HelloWrold.AdoNetClustering
         {
             _timer = new Timer(async _ =>
             {
-                await _grainFactory.GetGrain<IHello>(0).Say("小明");
+                try
+                {
+                    await _grainFactory.GetGrain<IHello>(0).Say("小明");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }, null, 0, 1000);
 
             return Task.CompletedTask;
