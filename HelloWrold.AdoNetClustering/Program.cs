@@ -6,6 +6,7 @@ using Orleans.Configuration;
 using Orleans.Hosting;
 using System;
 using System.Net;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace HelloWrold.AdoNetClustering
@@ -43,7 +44,7 @@ namespace HelloWrold.AdoNetClustering
                         {
                             options.AdvertisedIPAddress = IPAddress.Loopback;
                         })
-                        .ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(Program).Assembly).WithReferences())
+                        .ConfigureApplicationParts(x => x.AddApplicationPart(Assembly.GetEntryAssembly()))
                         .AddAdoNetGrainStorageAsDefault(options =>
                         {
                             options.ConnectionString = connectionString;

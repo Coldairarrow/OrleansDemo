@@ -3,6 +3,7 @@ using Colder.MessageBus.MassTransit;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Orleans;
 using Orleans.Hosting;
 using StockAccess.DependencyInjection;
 using System.Reflection;
@@ -22,7 +23,9 @@ namespace StockAccess
                 {
                     builder
                         .UseLocalhostClustering()
-                        .AddMemoryGrainStorageAsDefault();
+                        .AddMemoryGrainStorageAsDefault()
+                        .ConfigureApplicationParts(x => x.AddApplicationPart(Assembly.GetEntryAssembly()))
+                        ;
                 })
                 .ConfigureServices(services =>
                 {

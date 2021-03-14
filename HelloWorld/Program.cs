@@ -3,6 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Hosting;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace HelloWorld
@@ -16,7 +17,9 @@ namespace HelloWorld
                 {
                     builder
                         .UseLocalhostClustering()
-                        .AddMemoryGrainStorageAsDefault();
+                        .AddMemoryGrainStorageAsDefault()
+                        .ConfigureApplicationParts(x => x.AddApplicationPart(Assembly.GetEntryAssembly()));
+                    ;
                 })
                 .ConfigureServices(services =>
                 {
